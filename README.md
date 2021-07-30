@@ -1,2 +1,2 @@
 # Data-mining
-Data mining project
+Data mining project using Python and Orange
