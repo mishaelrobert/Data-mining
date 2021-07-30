@@ -1,0 +1,142 @@
+<!DOCTYPE html><html><head>
+    <meta charset="utf-8">
+    <title>Orange Report</title>
+
+    <style>
+    html, body, table {
+        font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        font-size: 13px;
+        margin:0px;
+        padding:0;
+        border:0 none;
+    }
+
+    h1, h2 , h3, h4, h5 {
+       padding: 1px;
+       font-size:100%;
+    }
+
+    h1 {
+        color: white;
+        background-color: black;
+        padding: 4px;
+        margin-top: 12px;
+        margin-bottom: 6px;
+    }
+
+    h2 {
+        border-bottom: 1px solid black;
+        padding-left: 2px;
+    }
+
+    ul, table, p {
+        padding: 10px;
+    }
+
+    table {
+        margin-left: -6px;
+    }
+
+    span.timestamp {
+        position: absolute;
+        right: 40px;
+        color:#ddd;
+    }
+
+    div.selected, div.normal {
+        margin: 5px;
+    }
+
+    div.selected {
+        background: #ddd;
+    }
+    @media print{
+        div.selected {
+            background: inherit;
+        }
+        ::-webkit-input-placeholder {
+            color: transparent;
+        }
+    }
+
+    div.content {
+        margin-left: 15px;
+    }
+
+    th, td {
+        text-align: left;
+        padding: 2px 6px 2px 6px;
+    }
+
+    th {
+        font-weight: bold;
+    }
+
+    @media screen {
+        td, th {
+            white-space: nowrap;
+        }
+    }
+
+    .caption {
+        text-align: center;
+        font-size: 90%;
+    }
+
+    img {
+        display: block;
+        margin: auto;
+        max-height: 20cm;
+    }
+
+    span.legend-square {
+        width: 1em;
+        height: 1em;
+        margin-right: 6px;
+        display: inline-block;
+    }
+
+    span.legend-item {
+        margin-right: 24px;
+    }
+
+    textarea {
+        border: 1px solid silver;
+        font-style: italic;
+        width: 100%;
+        height: 4em;
+    }
+
+    .textwrapper {
+        padding: 15px;
+    }
+
+    div.normal textarea:invalid {
+        display: none;
+    }
+
+    div.selected textarea {
+        display: block;
+    }
+
+    @media print{
+        section.section, img {
+            page-break-inside: avoid;
+        }
+    }
+    </style>
+
+
+</head><body>
+
+ 
+
+<div id="2468013993848" class="normal" onclick="pybridge._select_item(this.id)"><section class="section"><h1>Feature Constructor <span class="timestamp">Mon Jun 15 20, 17:46:55</span></h1><div class="content">
+<h2>Constructed features</h2><ul><b>unnamed:</b> log(1500) (numeric)<br><b>MAX_log:</b> log ( Max_Pledge_Tiers +1 ) (numeric)<br><b>MIN_log:</b> log ( Min_Pledge_Tiers +1 ) (numeric)<br></ul></div></section>
+
+<div class="textwrapper"><textarea placeholder="Write a comment..." oninput="this.innerHTML = this.value;pybridge._add_comment(this.parentNode.parentNode.id, this.value);">אני עושה כאן טרנספורמציית לוג לשני משתנים בהם יש המון אפסים בערכים ויש סכנה שהמודלים יראו בהם MISSSING מפני שהם אפס 
+לכן נוסיף להם ערך קטן על מנת שלא ייחשבו כחסרים
+חשוב לציין כי אין צורך להשתמש בטרנסופרמציית Continuze מפני שאין כאן משתנים קטגוריים עם המון ערכים אפשריים</textarea></div></div><div id="2468014639576" class="normal" onclick="pybridge._select_item(this.id)"><section class="section"><h1>Select Columns <span class="timestamp">Mon Jun 15 20, 17:52:00</span></h1><div class="content">
+<h2>Input data</h2><ul><b>Features:</b> Type, Has FB, Backed Projects, Previous Projects, Creator Desc Len, Title Len, Goal, Duration, Pledge Levels, Min Pledge Tiers, Max Pledge Tiers, Proj Desc Len, Images, Videos, Has Video, index, Backed_outl, Pledge_outl, unnamed, MAX_log, MIN_log  (total: 21 features)<br><b>Meta attributes:</b> URL, Title, Year, Month, Selected<br><b>Target:</b> Funded<br></ul><h2>Output data</h2><ul><b>Features:</b> index, Backed_outl, Pledge_outl, unnamed, MAX_log, MIN_log, Type, Has FB, Videos, Images, Proj Desc Len, Has Video, Month, Funded, Pledge Levels, Duration, Goal, Title Len, Creator Desc Len  (total: 19 features)<br><b>Meta attributes:</b> Selected<br></ul><ul><b>Removed:</b> 7 (Year, Max Pledge Tiers, URL, Previous Projects, Title, Min Pledge Tiers, Backed Projects)<br></ul></div></section>
+
+<div class="textwrapper"><textarea placeholder="Write a comment..." oninput="this.innerHTML = this.value;pybridge._add_comment(this.parentNode.parentNode.id, this.value);">כאן הוצאתי החוצה את כל המתשנים שעשיתי עליהם טרנספורמציות או אימפוטציה כלשהי ומשאיר את הערכים החדשים</textarea></div></div></body></html>
